@@ -368,9 +368,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  xSize: 100
-  zSize: 100
-  scale: 200
+  xSize: 300
+  zSize: 300
+  scale: 175
   octaves: 5
   lacunarity: 2
   seed: 43
