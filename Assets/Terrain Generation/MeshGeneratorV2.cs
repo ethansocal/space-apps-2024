@@ -12,9 +12,21 @@ public class MeshGeneratorV2 : MonoBehaviour
     [SerializeField] private AnimationCurve heightCurve;
     private Vector3[] vertices;
     private int[] triangles;
-    
-    private Color[] colors;
-    [SerializeField] private Gradient gradient;
+
+    private Color[] colors = new Color[]{
+        new Color((122f/255f), (111f/255f), (116f/255f)),
+        new Color((133f/255f), (68f/255f), (55f/255f)),
+        new Color((189f/255f), (128f/255f), (98f/255f)), 
+        new Color((129f/255f), (104f/255f), (78f/255f)),
+        new Color((172f/255f), (146f/255f), (119f/255f)), 
+        new Color((197f/255f), (188f/255f), (153f/255f)),
+        new Color((128f/255f), (142f/255f), (158f/255f)), 
+        new Color((117f/255f), (116f/255f), (146f/255f)),
+        new Color((192f/255f), (129f/255f), (192f/255f)),
+        new Color((87f/255f), (95f/255f), (89f/255f))
+    };
+    private Color[] randColor;
+    //[SerializeField] private Gradient gradient;
     
     private float minTerrainheight;
     private float maxTerrainheight;
@@ -154,20 +166,22 @@ public class MeshGeneratorV2 : MonoBehaviour
             vert++;
         }
     }
-
+    
     private void ColorMap()
     {
-        colors = new Color[vertices.Length];
+        //colors = new Color[vertices.Length];
+
+        randColor = new Color[vertices.Length];
 
         // Loop over vertices and apply a color from the depending on height (y axis value)
         for (int i = 0, z = 0; z < vertices.Length; z++)
         {
-            float height = Mathf.InverseLerp(minTerrainheight, maxTerrainheight, vertices[i].y);
-            colors[i] = gradient.Evaluate(height);
+            randColor[i] = colors[seed % colors.Length];
             i++;
         }
     }
-
+    
+    /*
     private void MapEmbellishments() 
     {
         for (int i = 0; i < vertices.Length; i++)
@@ -193,20 +207,22 @@ public class MeshGeneratorV2 : MonoBehaviour
             lastNoiseHeight = noiseHeight;
         }
     }
+    */
 
     private void UpdateMesh()
     {
         mesh.Clear();
         mesh.vertices = vertices;
         mesh.triangles = triangles;
-        mesh.colors = colors;
+        
+        mesh.colors = randColor;
         mesh.RecalculateNormals();
         mesh.RecalculateTangents();
 
         GetComponent<MeshCollider>().sharedMesh = mesh;
         gameObject.transform.localScale = new Vector3(MESH_SCALE, MESH_SCALE, MESH_SCALE);
 
-        MapEmbellishments();
+        //MapEmbellishments();
     }
 
 }
