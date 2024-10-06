@@ -8,7 +8,7 @@ public class Sky : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 500; i++)
         {
             var instance = Instantiate(starPrefab, transform, true);
             instance.transform.localPosition = Random.onUnitSphere / 2.05f;
