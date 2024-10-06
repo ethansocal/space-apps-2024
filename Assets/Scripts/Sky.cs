@@ -5,13 +5,15 @@ public class Sky : MonoBehaviour
     public GameObject vrPerson;
 
     public GameObject starPrefab;
+
+    public float radius = 1f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         for (int i = 0; i < 500; i++)
         {
             var instance = Instantiate(starPrefab, transform, true);
-            instance.transform.localPosition = Random.onUnitSphere / 2.05f;
+            instance.transform.localPosition = Random.onUnitSphere / radius;
         }
     }
 
