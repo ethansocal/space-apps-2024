@@ -7,6 +7,8 @@ public class Sky : MonoBehaviour
     public GameObject starPrefab;
 
     public float radius = 1.1f;
+
+    public float lookSpeed = 1.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,6 +16,7 @@ public class Sky : MonoBehaviour
         {
             var instance = Instantiate(starPrefab, transform, true);
             instance.transform.localPosition = Random.onUnitSphere / radius / 2f;
+
         }
     }
 
@@ -21,5 +24,6 @@ public class Sky : MonoBehaviour
     void Update()
     {
         transform.position = vrPerson.transform.position;
+        transform.Rotate(new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime * lookSpeed, 0, Input.GetAxis("Vertical") * Time.deltaTime * lookSpeed));
     }
 }

@@ -16,17 +16,17 @@ public class MeshGeneratorV2 : MonoBehaviour
     private Vector3[] vertices;
     private int[] triangles;
 
-    private Color[] colors = new Color[]{
-        new Color((122f/255f), (111f/255f), (116f/255f)),
-        new Color((133f/255f), (68f/255f), (55f/255f)),
-        new Color((189f/255f), (128f/255f), (98f/255f)), 
-        new Color((129f/255f), (104f/255f), (78f/255f)),
-        new Color((172f/255f), (146f/255f), (119f/255f)), 
-        new Color((197f/255f), (188f/255f), (153f/255f)),
-        new Color((128f/255f), (142f/255f), (158f/255f)), 
-        new Color((117f/255f), (116f/255f), (146f/255f)),
-        new Color((192f/255f), (129f/255f), (192f/255f)),
-        new Color((87f/255f), (95f/255f), (89f/255f))
+    private Color[] colors = {
+        new(122f/255f, 111f/255f, 116f/255f),
+        new(133f/255f, 68f/255f, 55f/255f),
+        new(189f/255f, 128f/255f, 98f/255f),
+        new(129f/255f, 104f/255f, 78f/255f),
+        new(172f/255f, 146f/255f, 119f/255f),
+        new(197f/255f, 188f/255f, 153f/255f),
+        new(128f/255f, 142f/255f, 158f/255f),
+        new(117f/255f, 116f/255f, 146f/255f),
+        new(192f/255f, 129f/255f, 192f/255f),
+        new(87f/255f, 95f/255f, 89f/255f)
     };
     private Color[] randColor;
     //[SerializeField] private Gradient gradient;
@@ -182,10 +182,9 @@ public class MeshGeneratorV2 : MonoBehaviour
         randColor = new Color[vertices.Length];
 
         // Loop over vertices and apply a color from the depending on height (y axis value)
-        for (int i = 0, z = 0; z < vertices.Length; z++)
+        for (int z = 0; z < vertices.Length; z++)
         {
-            randColor[i] = colors[seed % colors.Length];
-            i++;
+            randColor[z] = colors[seed % colors.Length];
         }
     }
     
