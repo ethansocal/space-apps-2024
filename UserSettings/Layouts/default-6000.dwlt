@@ -8,22 +8,22 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 772.6667
-    y: 28.666668
-    width: 1520
-    height: 757.3334
+    x: 0
+    y: 42
+    width: 1280
+    height: 678
   m_ShowMode: 4
-  m_Title: Project
-  m_RootView: {fileID: 7}
-  m_MinSize: {x: 875, y: 300}
+  m_Title: Git for Unity
+  m_RootView: {fileID: 8}
+  m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -72,12 +72,8 @@ MonoBehaviour:
     height: 622
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
-    width: 1520
-    height: 701.3333
-  m_MinSize: {x: 300, y: 100}
-  m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 41
+  controlID: 127
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -102,12 +98,8 @@ MonoBehaviour:
     height: 622
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
-    width: 1520
-    height: 701.3333
-  m_MinSize: {x: 300, y: 100}
-  m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 42
+  controlID: 128
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -125,19 +117,18 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 933.5
-    x: 1142.6666
     y: 0
-    width: 377.33337
-    height: 701.3333
-  m_MinSize: {x: 276, y: 76}
+    width: 346.5
+    height: 622
+  m_MinSize: {x: 51, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 19}
-  - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &5
+  - {fileID: 20}
+  - {fileID: 17}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,8 +147,6 @@ MonoBehaviour:
     y: 0
     width: 282.5
     height: 367.5
-    width: 345.33334
-    height: 414
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 21}
@@ -184,9 +173,6 @@ MonoBehaviour:
     y: 367.5
     width: 933.5
     height: 254.5
-    y: 414
-    width: 1142.6666
-    height: 287.3333
   m_MinSize: {x: 231, y: 276}
   m_MaxSize: {x: 10001, y: 10026}
   m_ActualView: {fileID: 19}
@@ -219,8 +205,6 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 678
-    width: 1520
-    height: 757.3333
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -245,7 +229,6 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1280
-    width: 1520
     height: 36
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -268,8 +251,6 @@ MonoBehaviour:
     x: 0
     y: 658
     width: 1280
-    y: 737.3333
-    width: 1520
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -296,12 +277,8 @@ MonoBehaviour:
     height: 622
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
-    width: 1142.6666
-    height: 701.3333
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 43
+  controlID: 51
   draggingID: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -327,10 +304,6 @@ MonoBehaviour:
     height: 367.5
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
-    width: 1142.6666
-    height: 414
-  m_MinSize: {x: 200, y: 50}
-  m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
   controlID: 52
   draggingID: 0
@@ -350,12 +323,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 282.5
-    x: 345.33334
     y: 0
     width: 322.5
     height: 367.5
-    width: 797.33325
-    height: 414
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 22}
@@ -794,9 +764,9 @@ MonoBehaviour:
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -1003,10 +973,8 @@ MonoBehaviour:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - 9c53962885c2c4f449125a979d6ad240
-        - e3a322931cfa48248b1c76ff13cdfd9d
-        - a8d96da4483b27645baa591b752469fa
-        - b11d97745982f574eb914736c0805a62
+        - 69be966cdb577e3469c3c5098c9bd2b0
+        - 808fe86acebe5834bba9eccd595b0d3c
         values:
         - path: Assets
           label: Assets
@@ -1026,8 +994,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
+        - path: Assets\Terrain Generation
+          label: Terrain Generation
           level: 1
           isFolder: 1
           isContainer: 0
@@ -1044,28 +1012,10 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scenes\Star.prefab
-          label: Star.prefab
+        - path: Assets\Terrain Generation\MeshGeneratorV2.cs
+          label: MeshGeneratorV2.cs
           level: 2
           isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\Star.prefab
-            fullPath: C:\Users\ethan\Coding\space-apps-2024\Assets\Scenes\Star.prefab
-            projectPath: Assets\Scenes\Star.prefab
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
           isContainer: 0
           isCollapsed: 0
           isHidden: 0
@@ -1080,29 +1030,10 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 3
             workTreeStatus: 0
-        - path: Assets\Scripts\Sky.cs
-          label: Sky.cs
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Sky.cs
-            fullPath: C:\Users\ethan\Coding\space-apps-2024\Assets\Scripts\Sky.cs
-            projectPath: Assets\Scripts\Sky.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
       folders:
         keys:
         - Assets
-        - Assets\Scenes
-        - Assets\Scripts
+        - Assets\Terrain Generation
         - UserSettings
         - UserSettings\Layouts
         values:
@@ -1124,8 +1055,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
+        - path: Assets\Terrain Generation
+          label: Terrain Generation
           level: 1
           isFolder: 1
           isContainer: 0
@@ -1224,8 +1155,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scenes
-        label: Scenes
+      - path: Assets\Terrain Generation
+        label: Terrain Generation
         level: 1
         isFolder: 1
         isContainer: 0
@@ -1242,96 +1173,42 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scenes\Star.prefab
-        label: Star.prefab
+      - path: Assets\Terrain Generation\MeshGeneratorV2.cs
+        label: MeshGeneratorV2.cs
         level: 2
         isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Star.prefab
-          fullPath: C:\Users\ethan\Coding\space-apps-2024\Assets\Scenes\Star.prefab
-          projectPath: Assets\Scenes\Star.prefab
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scenes\Star.prefab.meta
-        label: Star.prefab.meta
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Star.prefab.meta
-          fullPath: C:\Users\ethan\Coding\space-apps-2024\Assets\Scenes\Star.prefab.meta
-          projectPath: Assets\Scenes\Star.prefab.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts
-        label: Scripts
-        level: 1
-        isFolder: 1
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Terrain Generation\MeshGeneratorV2.cs
+          fullPath: C:\Users\ellio\Planet generation\Assets\Terrain Generation\MeshGeneratorV2.cs
+          projectPath: Assets\Terrain Generation\MeshGeneratorV2.cs
           originalPath: 
-          indexStatus: 0
+          indexStatus: 3
           workTreeStatus: 0
-      - path: Assets\Scripts\Sky.cs
-        label: Sky.cs
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Sky.cs
-          fullPath: C:\Users\ethan\Coding\space-apps-2024\Assets\Scripts\Sky.cs
-          projectPath: Assets\Scripts\Sky.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Sky.cs.meta
-        label: Sky.cs.meta
-        level: 3
+      - path: replay_pid35900.log
+        label: replay_pid35900.log
+        level: 0
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\Sky.cs.meta
-          fullPath: C:\Users\ethan\Coding\space-apps-2024\Assets\Scripts\Sky.cs.meta
-          projectPath: Assets\Scripts\Sky.cs.meta
+          path: replay_pid35900.log
+          fullPath: C:\Users\ellio\Planet generation\replay_pid35900.log
+          projectPath: replay_pid35900.log
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
+          indexStatus: 4
+          workTreeStatus: 0
       - path: UserSettings
         label: UserSettings
         level: 0
@@ -1349,6 +1226,24 @@ MonoBehaviour:
           projectPath: 
           originalPath: 
           indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        label: EditorUserSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\ellio\Planet generation\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
           workTreeStatus: 0
       - path: UserSettings\Layouts
         label: Layouts
@@ -1424,36 +1319,36 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\Scenes\Star.prefab
-      fullPath: C:\Users\ethan\Coding\space-apps-2024\Assets\Scenes\Star.prefab
-      projectPath: Assets\Scenes\Star.prefab
+    - path: Assets\Terrain Generation\MeshGeneratorV2.cs
+      fullPath: C:\Users\ellio\Planet generation\Assets\Terrain Generation\MeshGeneratorV2.cs
+      projectPath: Assets\Terrain Generation\MeshGeneratorV2.cs
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scenes\Star.prefab.meta
-      fullPath: C:\Users\ethan\Coding\space-apps-2024\Assets\Scenes\Star.prefab.meta
-      projectPath: Assets\Scenes\Star.prefab.meta
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: replay_pid35900.log
+      fullPath: C:\Users\ellio\Planet generation\replay_pid35900.log
+      projectPath: replay_pid35900.log
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Sky.cs
-      fullPath: C:\Users\ethan\Coding\space-apps-2024\Assets\Scripts\Sky.cs
-      projectPath: Assets\Scripts\Sky.cs
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: UserSettings\EditorUserSettings.asset
+      fullPath: C:\Users\ellio\Planet generation\UserSettings\EditorUserSettings.asset
+      projectPath: UserSettings\EditorUserSettings.asset
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Sky.cs.meta
-      fullPath: C:\Users\ethan\Coding\space-apps-2024\Assets\Scripts\Sky.cs.meta
-      projectPath: Assets\Scripts\Sky.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
+      indexStatus: 3
+      workTreeStatus: 0
     - path: UserSettings\Layouts\default-6000.dwlt
       fullPath: C:\Users\ellio\Planet generation\UserSettings\Layouts\default-6000.dwlt
       projectPath: UserSettings\Layouts\default-6000.dwlt
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
+      indexStatus: 9
+      workTreeStatus: 9
+    - path: UserSettings\Search.settings
+      fullPath: C:\Users\ellio\Planet generation\UserSettings\Search.settings
+      projectPath: UserSettings\Search.settings
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
     changedFilesText: 5 changed files
     lastCurrentBranchChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -7929,9 +7824,9 @@ MonoBehaviour:
   hasRemote: 1
   currentRemoteName: origin
   currentBranch: VRwork
-  currentRemoteUrl: git@github.com:ethansocal/space-apps-2024.git
-  statusAhead: 0
-  statusBehind: 0
+  currentRemoteUrl: https://github.com/ethansocal/space-apps-2024.git
+  statusAhead: 1
+  statusBehind: 1
   hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
   currentBranchContent:
@@ -7945,13 +7840,13 @@ MonoBehaviour:
     m_Tooltip: Url of the origin remote
     m_TextWithWhitespace: "https://github.com/ethansocal/space-apps-2024.git\u200B"
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-10-05T18:14:42.398-07:00
+    updatedTimeString: 2024-10-06T01:20:42.582-07:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-10-05T18:15:10.664-07:00
+    updatedTimeString: 2024-10-06T01:21:43.456-07:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-10-05T18:15:10.616-07:00
+    updatedTimeString: 2024-10-06T01:21:43.436-07:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -8040,9 +7935,6 @@ MonoBehaviour:
     y: 391.5
     width: 932.5
     height: 228.5
-    y: 438
-    width: 1141.6666
-    height: 261.3333
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -8065,7 +7957,6 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
     - Assets/Terrain Generation
     m_Globs: []
     m_ProductIds: 
@@ -8076,17 +7967,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
   - Assets/Terrain Generation
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ellio\Planet generation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 642.501}
-    m_SelectedIDs: d6dd0000
-    m_LastClickedID: 56790
-    m_ExpandedIDs: 
+    scrollPos: {x: 0, y: 591.5}
+    m_SelectedIDs: 4ede0000
+    m_LastClickedID: 56910
+    m_ExpandedIDs: 00000000521201005412010056120100581201005a1201005c1201005e1201006012010062120100641201006612010068120100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -8115,7 +8005,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000521201005412010056120100581201005a1201005c1201005e1201006012010062120100641201006612010068120100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -8143,7 +8033,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000c487000000000000b6c50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -8194,10 +8084,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1143.6666
-    y: 24
-    width: 376.33337
-    height: 675.3333
+    x: 933.5
+    y: 78
+    width: 345.5
+    height: 596
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -8215,8 +8105,8 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 33
+  m_LastInspectedObjectInstanceID: 54422
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -8247,8 +8137,6 @@ MonoBehaviour:
     y: 24
     width: 281.5
     height: 341.5
-    width: 344.33334
-    height: 388
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -8266,7 +8154,6 @@ MonoBehaviour:
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: d6faffff
-      m_ExpandedIDs: acb9ffff8abaffff22bbffff64beffffa8e9ffff1aeafffff8eaffffb2ebffffd2ebffffe0ebffffecebffffd6faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -8313,12 +8200,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 283.5
-    x: 346.33334
     y: 24
     width: 320.5
     height: 341.5
-    width: 795.33325
-    height: 388
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -8859,7 +8743,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 4949.155, y: -995.7433, z: 5488.1924}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
     m_Value: {x: 5000, y: 610.66187, z: 5000}
   m_RenderMode: 0
@@ -8907,14 +8791,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.104268976, y: 0.26610228, z: -0.028870614, w: 0.9579163}
+    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-    m_Value: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+    m_Value: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_Size:
-    m_Target: 3902.4866
+    m_Target: 10
     speed: 2
     m_Value: 7097.387
-    m_Value: 42452.312
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -9006,10 +8889,6 @@ MonoBehaviour:
     m_HBaseRangeMax: 81.625
     m_VBaseRangeMin: -80.125
     m_VBaseRangeMax: 80.125
-    m_HBaseRangeMin: -243.5
-    m_HBaseRangeMax: 243.5
-    m_VBaseRangeMin: -132.83334
-    m_VBaseRangeMax: 132.83334
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -9031,10 +8910,6 @@ MonoBehaviour:
       height: 320.5
     m_Scale: {x: 2, y: 2}
     m_Translation: {x: 163.25, y: 160.25}
-      width: 730.5
-      height: 398.5
-    m_Scale: {x: 1.5, y: 1.5}
-    m_Translation: {x: 365.25, y: 199.25}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -9045,15 +8920,9 @@ MonoBehaviour:
       y: -80.125
       width: 163.25
       height: 160.25
-      x: -243.5
-      y: -132.83333
-      width: 487
-      height: 265.66666
     m_MinimalGUI: 1
   m_defaultScale: 2
   m_LastWindowPixelSize: {x: 653, y: 683}
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1095.75, y: 629.25}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
