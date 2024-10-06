@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
+[ExecuteInEditMode]
 public class MeshGeneratorV2 : MonoBehaviour
 {
     Mesh mesh;
