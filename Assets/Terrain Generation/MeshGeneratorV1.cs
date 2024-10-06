@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(MeshFilter))]
 public class MeshGeneratorV1 : MonoBehaviour
@@ -26,6 +28,11 @@ public class MeshGeneratorV1 : MonoBehaviour
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         CreateNewMap();
+    }
+
+    private void OnValidate()
+    {
+        Start();
     }
 
     public void CreateNewMap()
