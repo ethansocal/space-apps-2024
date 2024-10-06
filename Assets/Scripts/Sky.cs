@@ -11,7 +11,7 @@ public class Sky : MonoBehaviour
         for (int i = 0; i < 100; i++)
         {
             var instance = Instantiate(starPrefab, transform, true);
-            instance.transform.localPosition = Random.onUnitSphere / 2;
+            instance.transform.localPosition = Random.onUnitSphere / 2.05f;
         }
     }
 
