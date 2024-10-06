@@ -65,10 +65,22 @@ providers = {
 		priority = 210
 		defaultAction = null
 	}
+	archetype = {
+		active = true
+		priority = 2500
+		defaultAction = null
+	}
+	journal = {
+		active = true
+		priority = 2500
+		defaultAction = null
+	}
 }
 objectSelectors = {
 }
 recentSearches = [
+	"xri left l"
+	"xri left locomotive"
 	"xri left ha"
 	"rotaate m"
 	"xri right interaction/turn"
