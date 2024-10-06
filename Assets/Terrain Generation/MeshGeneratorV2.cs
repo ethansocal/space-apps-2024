@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(MeshFilter))]
 [ExecuteInEditMode]
@@ -51,6 +53,11 @@ public class MeshGeneratorV2 : MonoBehaviour
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         CreateNewMap();
+    }
+
+    private void OnValidate()
+    {
+        Start();
     }
 
     private void SetNullProperties() 
