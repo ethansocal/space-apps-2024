@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class Sky : MonoBehaviour
 {
@@ -7,6 +9,8 @@ public class Sky : MonoBehaviour
     public GameObject starPrefab;
 
     public float radius = 1.1f;
+    
+    public XRInteractionManager interactionManager;
 
     public float lookSpeed = 1.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,7 +20,8 @@ public class Sky : MonoBehaviour
         {
             var instance = Instantiate(starPrefab, transform, true);
             instance.transform.localPosition = Random.onUnitSphere / radius / 2f;
-
+            var component = instance.AddComponent<XRSimpleInteractable>();
+            component.interactionManager = interactionManager;
         }
     }
 
