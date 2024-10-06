@@ -14,9 +14,13 @@ public class Sky : MonoBehaviour
     public XRInteractionManager interactionManager;
 
     public float lookSpeed = 1.0f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Start()
     {
+        foreach (Transform child in transform) {
+            Destroy(child.gameObject);
+        }
         for (int i = 0; i < 350; i++)
         {
             var instance = Instantiate(starPrefab, transform, true);

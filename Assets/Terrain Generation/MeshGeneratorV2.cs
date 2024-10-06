@@ -68,6 +68,14 @@ public class MeshGeneratorV2 : MonoBehaviour
         if (lacunarity <= 0) lacunarity = 2;
         if (scale <= 0) scale = 50;
     } 
+    public void restartSeed(String s) {
+        seed = int.Parse(s);
+        CreateNewMap();
+    }
+    public void randomSeed() {
+        seed = Random.Range(0, 1000);
+        CreateNewMap();
+    }
 
     public void CreateNewMap()
     {
@@ -102,7 +110,7 @@ public class MeshGeneratorV2 : MonoBehaviour
 
     private Vector2[] GetOffsetSeed()
     {
-        seed = Random.Range(0, 1000);
+        //seed = Random.Range(0, 1000);
         
         // changes area of map
         System.Random prng = new System.Random(seed);
