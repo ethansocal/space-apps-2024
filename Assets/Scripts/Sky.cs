@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactables.Visuals;
 
 public class Sky : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class Sky : MonoBehaviour
             instance.transform.localPosition = Random.onUnitSphere / radius / 2f;
             var component = instance.AddComponent<XRSimpleInteractable>();
             component.interactionManager = interactionManager;
+            // component.selectEntered.AddListener();
+            instance.AddComponent<XRTintInteractableVisual>();
         }
     }
 
