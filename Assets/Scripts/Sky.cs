@@ -1,5 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactables.Visuals;
@@ -16,12 +19,13 @@ public class Sky : MonoBehaviour
     public XRInteractionManager interactionManager;
 
     public float lookSpeed = 1.0f;
+    public TextMeshPro text;
 
     private readonly List<Star> selectedStars = new();
 
-    private LineRenderer currentLine;
+    private readonly List<Star> stars = new();
 
-    private Star[] stars;
+    private LineRenderer currentLine;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -31,30 +35,7 @@ public class Sky : MonoBehaviour
 
     private void Start()
     {
-        foreach (Transform child in transform) {
-            Destroy(child.gameObject);
-        }
-        stars = new Star[350];
-        for (var i = 0; i < stars.Length; i++)
-        {
-            stars[i].position = Random.onUnitSphere / radius / 2f;
-            stars[i].radius = Random.Range(0.1f, 1.0f); // Example radius range
-            stars[i].color = new Color(Random.value, Random.value, Random.value); // Random color
-        }
-
-        for (var i = 0; i < stars.Length; i++)
-        {
-            var star = stars[i];
-            var instance = Instantiate(starPrefab, transform, true);
-            instance.transform.localPosition = star.position;
-            var component = instance.AddComponent<XRSimpleInteractable>();
-            component.interactionManager = interactionManager;
-            int current = i;
-            component.selectEntered.AddListener(arg0 => StarSelected(current));
-            Debug.Log("Added listener");
-
-            instance.AddComponent<XRTintInteractableVisual>();
-        }
+        StartCoroutine(GetStars("11 Com b"));
     }
 
     // Update is called once per frame
@@ -71,14 +52,62 @@ public class Sky : MonoBehaviour
         selectedStars.Add(stars[starIndex]);
         currentLine.positionCount = selectedStars.Count;
         currentLine.SetPosition(selectedStars.Count - 1, stars[starIndex].position);
-        
+
         Debug.Log("Star " + starIndex + " selected");
+    }
+
+    private IEnumerator GetStars(string planetName)
+    {
+        var www = UnityWebRequest.Get("http://localhost:5000/get_stars/" + planetName);
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+            Debug.Log(www.error);
+        else
+            Debug.Log(www.downloadHandler.text);
+        foreach (var starData in www.downloadHandler.text.Split("\n"))
+            try
+            {
+                float position_x, position_y, position_z, brightness, color;
+                if (float.TryParse(starData.Split(",")[3], out position_x) &&
+                    float.TryParse(starData.Split(",")[4], out position_y) &&
+                    float.TryParse(starData.Split(",")[5], out position_z))
+                    stars.Add(new Star
+                    {
+                        position = new Vector3(position_x, position_y, position_z),
+                        gaia_id = starData.Split(",")[0],
+                        color = float.TryParse(starData.Split(",")[2], out color) ? color : 0f,
+                        brightness = float.TryParse(starData.Split(",")[1], out brightness) ? brightness : 0f
+                    });
+            }
+            catch
+            {
+            }
+
+        foreach (Transform child in transform) Destroy(child.gameObject);
+
+        for (var i = 0; i < stars.Count; i++)
+        {
+            var star = stars[i];
+            var instance = Instantiate(starPrefab, transform, true);
+            instance.transform.localPosition = star.position.normalized / radius / 2f;
+            instance.transform.localScale *= star.brightness;
+            var component = instance.AddComponent<XRSimpleInteractable>();
+            component.interactionManager = interactionManager;
+            var current = i;
+            component.selectEntered.AddListener(arg0 => StarSelected(current));
+            component.hoverEntered.AddListener(arg1 => text.text = star.gaia_id);
+            Debug.Log("Added listener");
+
+            instance.AddComponent<XRTintInteractableVisual>();
+        }
     }
 }
 
 public struct Star
 {
     public Vector3 position;
-    public float radius;
-    public Color color;
+    public float color;
+    public float brightness;
+    public string gaia_id;
 }
