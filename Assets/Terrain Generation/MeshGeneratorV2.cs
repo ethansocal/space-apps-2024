@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using TMPro;
 
 [RequireComponent(typeof(MeshFilter))]
 [ExecuteInEditMode]
@@ -37,6 +38,10 @@ public class MeshGeneratorV2 : MonoBehaviour
     public int xSize;
     public int zSize;
 
+    public TMP_Dropdown dropdown;
+
+    public SaveSettings savedSettings;
+
     public float scale; 
     public int octaves;
     public float lacunarity;
@@ -49,7 +54,6 @@ public class MeshGeneratorV2 : MonoBehaviour
     {
         // Use this method if you havn't filled out the properties in the inspector
         // SetNullProperties(); 
-
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         CreateNewMap();
@@ -68,8 +72,8 @@ public class MeshGeneratorV2 : MonoBehaviour
         if (lacunarity <= 0) lacunarity = 2;
         if (scale <= 0) scale = 50;
     } 
-    public void restartSeed(String s) {
-        seed = int.Parse(s);
+    public void restartSeed() {
+        seed = PlayerPrefs.GetInt("SelectedDropdownValue");
         CreateNewMap();
     }
     public void randomSeed() {
