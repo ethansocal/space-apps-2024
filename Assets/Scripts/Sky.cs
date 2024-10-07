@@ -51,7 +51,7 @@ public class Sky : MonoBehaviour
         if (currentLine == null) currentLine = Instantiate(linePrefab, transform).GetComponent<LineRenderer>();
         selectedStars.Add(stars[starIndex]);
         currentLine.positionCount = selectedStars.Count;
-        currentLine.SetPosition(selectedStars.Count - 1, stars[starIndex].position);
+        currentLine.SetPosition(selectedStars.Count - 1, stars[starIndex].position.normalized);
 
         Debug.Log("Star " + starIndex + " selected");
     }
