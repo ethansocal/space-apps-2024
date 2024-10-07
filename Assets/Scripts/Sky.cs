@@ -49,7 +49,10 @@ public class Sky : MonoBehaviour
             instance.transform.localPosition = star.position;
             var component = instance.AddComponent<XRSimpleInteractable>();
             component.interactionManager = interactionManager;
-            component.selectEntered.AddListener(arg0 => StarSelected(i));
+            int current = i;
+            component.selectEntered.AddListener(arg0 => StarSelected(current));
+            Debug.Log("Added listener");
+
             instance.AddComponent<XRTintInteractableVisual>();
         }
     }
@@ -68,7 +71,7 @@ public class Sky : MonoBehaviour
         selectedStars.Add(stars[starIndex]);
         currentLine.positionCount = selectedStars.Count;
         currentLine.SetPosition(selectedStars.Count - 1, stars[starIndex].position);
-
+        
         Debug.Log("Star " + starIndex + " selected");
     }
 }
