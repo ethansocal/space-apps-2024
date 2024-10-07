@@ -1,3 +1,7 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <engine:ListView />
+    <Style src="project://database/Assets/UI%20Toolkit/ExoplanetSelectionStyles.uss?fileID=7433441132597879392&amp;guid=c96bc08997c1c104bb654ea99189b1b2&amp;type=3#ExoplanetSelectionStyles" />
+    <engine:VisualElement name="Container" style="flex-grow: 1;">
+        <engine:Label text="Choose your exoplanet!" style="font-size: 47px;" />
+        <engine:ListView name="exoplanet-list" fixed-item-height="130" style="height: 317px;" />
+    </engine:VisualElement>
 </engine:UXML>
